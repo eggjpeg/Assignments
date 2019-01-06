@@ -10,7 +10,8 @@ namespace A5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("spaz");
+
+            Console.WriteLine("spaz 2");
 
         }
     }
