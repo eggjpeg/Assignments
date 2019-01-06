@@ -14,11 +14,14 @@ namespace A6
         }
         static string Compress(string s)
         {
-            foreach (char dupe in s)
+            string compressedS = "";
+            int n = 0;
+            for (int i = 0; i < s.Length; i++)
             {
-                if (s[dupe] == s[dupe + 1])
+                if (s[i] == s[i+1])
                 {
-
+                    n = i;
+                    compressedS = s[i] + n;
                 }
             }
         }
