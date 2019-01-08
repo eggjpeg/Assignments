@@ -10,20 +10,35 @@ namespace A6
     {
         static void Main(string[] args)
         {
-
+          string spaz =  Compress("AAAAAAAABBBCD");
+            Console.WriteLine(spaz);
+            Console.ReadLine();
         }
         static string Compress(string s)
         {
-            string compressedS = "";
-            int n = 0;
-            for (int i = 0; i < s.Length; i++)
+            StringBuilder sb = new StringBuilder();
+
+            int acc = 1;
+
+            s = s.PadRight(' ');
+            for (int i = 0; i < s.Length - 1; i++)
             {
-                if (s[i] == s[i+1])
+                if (s[i] == s[i + 1])
+                    acc++;
+                else
                 {
-                    n = i;
-                    compressedS = s[i] + n;
+                    if (acc != 1)
+                    {
+                        sb.Append(s[i] + Convert.ToString(acc) + "~");
+                        acc = 1;
+                    }
+                    else
+                        sb.Append(s[i]);
+
                 }
             }
+
+            return sb.ToString();
         }
     }
 }
