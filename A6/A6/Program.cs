@@ -10,10 +10,15 @@ namespace A6
     {
         static void Main(string[] args)
         {
-            string s = LoadString("txt.txt");
-            string spaz = Compress(s);
+            //string s = CompressFile("txt.txt");
 
-            Console.WriteLine(spaz);
+            string s = "AAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBCCC ";
+
+            string d = Compress(s);
+
+            string d2 = DeCompress(d);
+
+            Console.WriteLine(d2);
             Console.ReadLine();
         }
 
@@ -70,17 +75,36 @@ namespace A6
             return sb.ToString();
         }
         
-        static string LoadString(string file)
+        static string CompressFile(string file)
         {
             using (StreamReader sr = new StreamReader(file))
             {
                 StringBuilder sb = new StringBuilder();
                 while (!sr.EndOfStream)
                 {
-                    string line = sr.ReadLine().Trim().ToLower();
+                    string line = sr.ReadLine().Trim();
                     if (line == "")
                         continue;
-                    sb.Append(line);
+                  var compressedGuy = Compress(line);
+
+                    sb.AppendLine(compressedGuy);
+                }
+                return sb.ToString();
+            }
+        }
+        static string DeCompressFile(string file)
+        {
+            using (StreamReader sr = new StreamReader(file))
+            {
+                StringBuilder sb = new StringBuilder();
+                while (!sr.EndOfStream)
+                {
+                    string line = sr.ReadLine().Trim();
+                    if (line == "")
+                        continue;
+                    var deCompressedGuy = DeCompress(line);
+
+                    sb.AppendLine(deCompressedGuy);
                 }
                 return sb.ToString();
             }
