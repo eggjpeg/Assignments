@@ -69,35 +69,7 @@ namespace A6
 
             return sb.ToString();
         }
-        //static string CompressFile(string file)
-        //{
-        //    using (StreamReader sr = new StreamReader(file))
-        //    {
-        //        var list = new List<string>();
-        //        while (!sr.EndOfStream)
-        //        {
-        //            int acc = 1;
-
-        //            s = s.PadRight(' ');
-        //            for (int i = 0; i < s.Length - 1; i++)
-        //            {
-        //                if (s[i] == s[i + 1])
-        //                    acc++;
-        //                else
-        //                {
-        //                    if (acc != 1)
-        //                    {
-        //                        list.Add(s[i] + Convert.ToString(acc) + "~");
-        //                        acc = 1;
-        //                    }
-        //                    else
-        //                        sb.Append(s[i]);
-
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
+        
         static string LoadString(string file)
         {
             using (StreamReader sr = new StreamReader(file))
