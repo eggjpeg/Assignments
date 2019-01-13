@@ -38,7 +38,8 @@ namespace A8
             var lst = new List<Tuple<int, int>>();
             for (int i = 0; i <= list.Count - 2; i++)
             {
-                lst.Add(Tuple.Create(list[i], list[i + 1]));
+                if (list[i+1] - list[i] == 2)
+                    lst.Add(Tuple.Create(list[i], list[i + 1]));
             }
             return lst;
         }
