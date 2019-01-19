@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace A10
 {
+    enum Order
+    {
+        Power,
+        MultDiv
+    }
     enum TokenType
     {
         Num,
@@ -16,7 +21,7 @@ namespace A10
     {
         static void Main(string[] args)
         {
-            double r = Evaluate("2+4*3+4");
+             double r = Evaluate("(2+1)*2");     
             Console.WriteLine(r);
             Console.ReadLine();
         }
@@ -63,8 +68,32 @@ namespace A10
         static List<object> Evaluate(List<object> list)
         {
             if (list.Count == 1)
-                return list;
+                return list;  
+            for (int i = 0; i < list.Count; i++)
+            {
+                    if (list.Contains('^'))
+                {
+                    for (int j = 0; j < list.Count; j++)
+                    {
+                        if (DetermineType(list[j]) == TokenType.Op && Convert.ToChar(list[j]) == '^')
+                        {
+                            double r = Math.Pow((double)list[j - 1], (double)list[j + 1]);
+                            Process(list, j, r);
+                        }
+                    }
+                }
+                if (DetermineType(list[i]) == TokenType.Op && Convert.ToChar(list[i]) == '*')
+                {
+                    double r = (double)list[i - 1] * (double)list[i + 1];
+                    Process(list, i, r);
+                }
 
+                if (DetermineType(list[i]) == TokenType.Op && Convert.ToChar(list[i]) == '/')
+                {
+                    double r = (double)list[i - 1] / (double)list[i + 1];
+                    Process(list, i, r);
+                }
+            }
             var lstNew = new List<object>();
             double n1 = (double)list[0];
             char op = (char)list[1];
@@ -79,6 +108,13 @@ namespace A10
             return Evaluate(lstNew);
         }
 
+        private static void Process(List<object> list, int i, double r)
+        {
+            list.RemoveAt(i + 1);
+            list.RemoveAt(i - 1);
+            list.RemoveAt(i - 1);
+            list.Insert(i - 1, r);
+        }
 
         static double Evaluate(string exp)
         {
