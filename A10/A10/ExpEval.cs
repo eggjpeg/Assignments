@@ -68,15 +68,32 @@ namespace A10
         {
             if (list.Count == 1)
                 return list;
-            string[] orderList = { "^,^", "*,/", "+,-" };
+            string[] orderList = {"^,^", "*,/", "+,-" };
+            var lst = new List<object>();
+            if (list.Contains('('))
+            {
+                var BiggestIndex = Util.FindInnerPars(list, '(', ')');
+                if (BiggestIndex.Item1 > -1 && BiggestIndex.Item1 != int.MaxValue && BiggestIndex.Item2 > -1 && BiggestIndex.Item2 != int.MaxValue)
+                {
+                        for (int i = 0; i < list.Count; i++)
+                        {
+                        if (BiggestIndex.Item1 < i && BiggestIndex.Item2 > i)
+                            lst.Add(list[i]);
+                        }
+                    list.RemoveRange(BiggestIndex.Item1, BiggestIndex.Item2 - BiggestIndex.Item1 + 1);
+                    var ls = Evaluate(lst);
+                    list.InsertRange(BiggestIndex.Item1, ls);
+                    return Evaluate(list);
+                }
+            }
             foreach (string opSet in orderList)
             {
                 string[] opAr = opSet.Split(',');
-                int index = Util.FindSmallestIndexOf(list, Convert.ToChar(opAr[0]), Convert.ToChar(opAr[1]));
-                if (index > -1 && index != int.MaxValue)
+                int SmallestIndex = Util.FindSmallestIndexOf(list, Convert.ToChar(opAr[0]), Convert.ToChar(opAr[1]));  
+                if (SmallestIndex > -1 && SmallestIndex != int.MaxValue)
                 {
-                    double r = DoOp((char)list[index], list, index);
-                    Shrink(list, index, r);
+                    double r = DoOp((char)list[SmallestIndex], list, SmallestIndex);
+                    Shrink(list, SmallestIndex, r);
                     return Evaluate(list);
                 }
             }

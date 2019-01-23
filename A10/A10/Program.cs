@@ -12,7 +12,7 @@ namespace A10
         static void Main(string[] args)
         {
             ExpEval e = new ExpEval();
-            double r = e.Evaluate("-4*2^2*2*3/3");     
+            double r = e.Evaluate("((2+6)-5)    *(2^3)");     
             Console.WriteLine(r);
             Console.ReadLine();
         }
