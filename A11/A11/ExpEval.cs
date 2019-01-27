@@ -11,7 +11,6 @@ namespace A11
         //List of functions
         List<string> funcList = new List<string>(new string[] { "sin", "cos", "log", "tan" });
 
-
         List<object> Tokenize(string exp)
         {
             if (exp[0] == '-')
@@ -167,6 +166,24 @@ namespace A11
 
             list.RemoveRange(index, 2);
             list.Insert(index, r);
+        }
+
+        public List<Tuple<double, double>> Evaluate(string f, double fromX, double toX, double increment)
+        {
+            string copy = f;
+            var list = new List<Tuple<double, double>>();
+
+            for (double x = fromX; x <= toX; x+=increment)
+            {
+                if (x > 0)
+                    f = f.Replace("x", Convert.ToString(x));
+                else
+                    f = f.Replace("x", "(0" + Convert.ToString(x) + ")");
+                double r = Evaluate(f);
+                f = copy;
+                list.Add(new Tuple<double, double>(x, r));
+            }
+            return list;
         }
 
         private void Shrink(List<object> list, int i, double r)

@@ -37,6 +37,11 @@ namespace A11
             var tuple = new Tuple<int, int>(i1, i2);
             return tuple;
         }
+        public static void PrintList(List<Tuple<double,double>> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+                Console.WriteLine(list[i]);
+        }
 
     }
 }
