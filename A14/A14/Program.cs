@@ -7,136 +7,101 @@ using System.Threading;
 
 namespace A14
 {
-    class Card
-    {
-        public string Value;
-        public char Rank;
-        public char Suit;
-
-        public Card(string v)
-        {
-            Value = v;
-            Rank = v[0];
-            Suit = v[1];
-        }
-
-       public int GetRankNum()
-        {
-            switch (Rank)
-            {
-                case '6':return 6;
-                case '7': return 7;
-                case '8': return 8;
-                case '9': return 9;
-                case 'J': return 11;
-                case 'Q': return 12;
-                case 'K': return 13;
-                case 'A': return 14;
-                case '1':  return 10;
-                default: throw new Exception("spaz");
-            }
-        }
-        
-
-    }
-
     class Program
     {
         static void Main(string[] args)
         {
-            var list = CreateDeck();
-            var tup = Deal(list);
+            Deck d = new Deck();
+            d.Shuffle();
+            var tup = Deal(d);
             Play(tup.Item1, tup.Item2);
             Console.ReadLine();
         }
-        static List<Card> CreateDeck()
+
+        static Tuple<List<Card>,List<Card>> Deal(Deck deck)
         {
-            string[] suits = new string[] { "S", "H", "C", "D", };
-            string[] ranks = new string[] { "6", "7", "8", "9", "1", "J", "Q", "K", "A" };
-            var list = new List<Card>();
-            for (int i = 0; i < ranks.Length; i++)
-            {
-                for (int j = 0; j < suits.Length; j++)
-                {
-                    Card c = new Card(ranks[i] + suits[j]);
-                    list.Add(c);
-                }
-            }
-            return list;
-        }
-        static void Shuffle(List<Card> deck)
-        {
-            for (int i = 0; i < deck.Count; i++)
-            {
-                var r = new Random();
-                Card temp = deck[i];
-                int randomIndex = r.Next(i, deck.Count);
-                deck[i] = deck[randomIndex];
-                deck[randomIndex] = temp;
-            }
-            Console.WriteLine();
-        }
-        static Tuple<List<Card>,List<Card>> Deal(List<Card> deck)
-        {
-            Shuffle(deck);
             var list1 = new List<Card>();
             var list2 = new List<Card>();
-            for (int i = 0; i < deck.Count; i++)
+            for (int i = 0; i < deck.cards.Count; i++)
             {
                 if (i % 2 == 0)
-                    list1.Add(deck[i]);
+                    list1.Add(deck.cards[i]);
                 else
-                    list2.Add(deck[i]);
+                    list2.Add(deck.cards[i]);
             }
             return new Tuple<List<Card>, List<Card>>(list1, list2);
         }
-        static void ShowDeck(List<Card> deck)
-        {
-            for (int i = 0; i < deck.Count; i++)
-            {
-                Console.Write(deck[i].Rank);
-                Console.WriteLine(deck[i].Suit);
-            }
-        }
+        
         static void Play(List<Card> pile1, List<Card> pile2)
         {
-            int i = 0;
-            while (pile1.Count != 0 || pile2.Count != 0)
+            while (pile1.Count != 0 && pile2.Count != 0)
             {
-                Console.WriteLine("Spaz #1 " + pile1[i] + " vs Spaz #2 " + pile2[i]);
-                if (pile1[i].GetRankNum() > pile2[i].GetRankNum())
-                    Spaz1Win(pile1, pile2, i);
-                else if (pile2[i].GetRankNum() > pile1[i].GetRankNum())
-                    Spaz2Win(pile1, pile2, i);
-                else if (pile2[i].GetRankNum() == pile1[i].GetRankNum())
+                
+                Console.WriteLine("Spaz #1 " + pile1[0].Value + " vs Spaz #2 " +  pile2[0].Value);
+                Card c1 = pile1[0];
+                Card c2 = pile2[0];
+                int c = CompareRanks(c1.GetRankNum(), c2.GetRankNum());
+                if(c==0)
                 {
                     Console.WriteLine("Tie! Coinflip incoming!");
                     var r = new Random();
                     int coin = r.Next(1, 3);
                     if (coin == 1)
-                        Spaz1Win(pile1, pile2, i);
+                        Spaz1Win(pile1, pile2);
                     else
-                        Spaz2Win(pile1, pile2, i);
+                        Spaz2Win(pile1, pile2);
                 }
-                else if (pile1[i].GetRankNum() == 6 && pile2[i].GetRankNum() == 14)
-                    Spaz1Win(pile1, pile2, i);
-                else if (pile2[i].GetRankNum() == 6 && pile1[i].GetRankNum() == 14)
-                    Spaz2Win(pile1, pile2, i);
-                i++;
+               else if(c==1)
+                    Spaz1Win(pile1, pile2);
+               else if (c==2)
+                    Spaz2Win(pile1, pile2);
             }
+            if (pile1.Count == 0)
+                Console.WriteLine("Spaz #2 wins the game!");
+            else
+                Console.WriteLine("Spaz #1 wins the game!");
+        }
+        static int CompareRanks(int rank1, int rank2)
+        {
+            if (rank1 == 6 && rank2 == 14)
+                return 1;
+            else if (rank2 == 6 && rank1 == 14)
+                return 2;
+            else if (rank1 > rank2)
+                return 1;
+            else if (rank2 > rank1)
+                return 2;
+            else if (rank1 == rank2)
+                return 0;
+            return -1;
         }
 
-        private static void Spaz1Win(List<Card> pile1, List<Card> pile2, int i)
+        private static void Spaz1Win(List<Card> pile1, List<Card> pile2)
         {
-            pile1.Add(pile2[i]);
-            pile2.Remove(pile2[i]);
+            Card c1 = pile1[0];
+            Card c2 = pile2[0];
+
+            pile1.RemoveAt(0);
+            pile2.RemoveAt(0);
+
+            pile1.Add(c1);
+            pile1.Add(c2);
+
+
             Console.WriteLine("Spaz #1 wins!");
         }
-        private static void Spaz2Win(List<Card> pile1, List<Card> pile2, int i)
+        private static void Spaz2Win(List<Card> pile1, List<Card> pile2)
         {
-            pile2.Add(pile1[i]);
-            pile1.Remove(pile1[i]);
+            Card c1 = pile1[0];
+            Card c2 = pile2[0];
+
+            pile2.RemoveAt(0);
+            pile1.RemoveAt(0);
+
+            pile2.Add(c1);
+            pile2.Add(c2);
             Console.WriteLine("Spaz #2 wins!");
+
         }
     }
 }   
