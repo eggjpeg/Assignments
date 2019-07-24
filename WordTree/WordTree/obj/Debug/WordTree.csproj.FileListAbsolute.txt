@@ -1,0 +1,8 @@
+C:\Users\n\source\repos\WordTree\WordTree\obj\Debug\WordTree.csprojAssemblyReference.cache
+C:\Users\n\source\repos\WordTree\WordTree\obj\Debug\WordTree.csproj.CoreCompileInputs.cache
+C:\Users\n\source\repos\WordTree\WordTree\bin\Debug\WordTree.exe.config
+C:\Users\n\source\repos\WordTree\WordTree\bin\Debug\WordTree.exe
+C:\Users\n\source\repos\WordTree\WordTree\bin\Debug\WordTree.pdb
+C:\Users\n\source\repos\WordTree\WordTree\obj\Debug\WordTree.exe
+C:\Users\n\source\repos\WordTree\WordTree\obj\Debug\WordTree.pdb
+C:\Users\n\source\repos\WordTree\WordTree\bin\Debug\text.txt
