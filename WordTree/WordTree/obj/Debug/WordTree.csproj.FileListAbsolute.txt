@@ -6,3 +6,4 @@ C:\Users\n\source\repos\WordTree\WordTree\bin\Debug\WordTree.pdb
 C:\Users\n\source\repos\WordTree\WordTree\obj\Debug\WordTree.exe
 C:\Users\n\source\repos\WordTree\WordTree\obj\Debug\WordTree.pdb
 C:\Users\n\source\repos\WordTree\WordTree\bin\Debug\text.txt
+C:\Users\n\source\repos\WordTree\WordTree\bin\Debug\subText.txt
