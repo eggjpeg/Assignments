@@ -1,0 +1,11 @@
+/Users/n/Projects/WordTree2/WordTree2/obj/Debug/netcoreapp2.1/WordTree2.csprojAssemblyReference.cache
+/Users/n/Projects/WordTree2/WordTree2/obj/Debug/netcoreapp2.1/WordTree2.csproj.CoreCompileInputs.cache
+/Users/n/Projects/WordTree2/WordTree2/obj/Debug/netcoreapp2.1/WordTree2.AssemblyInfoInputs.cache
+/Users/n/Projects/WordTree2/WordTree2/obj/Debug/netcoreapp2.1/WordTree2.AssemblyInfo.cs
+/Users/n/Projects/WordTree2/WordTree2/bin/Debug/netcoreapp2.1/WordTree2.deps.json
+/Users/n/Projects/WordTree2/WordTree2/bin/Debug/netcoreapp2.1/WordTree2.runtimeconfig.json
+/Users/n/Projects/WordTree2/WordTree2/bin/Debug/netcoreapp2.1/WordTree2.runtimeconfig.dev.json
+/Users/n/Projects/WordTree2/WordTree2/bin/Debug/netcoreapp2.1/WordTree2.dll
+/Users/n/Projects/WordTree2/WordTree2/bin/Debug/netcoreapp2.1/WordTree2.pdb
+/Users/n/Projects/WordTree2/WordTree2/obj/Debug/netcoreapp2.1/WordTree2.dll
+/Users/n/Projects/WordTree2/WordTree2/obj/Debug/netcoreapp2.1/WordTree2.pdb
