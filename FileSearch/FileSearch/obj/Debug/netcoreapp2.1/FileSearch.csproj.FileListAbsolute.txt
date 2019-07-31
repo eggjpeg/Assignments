@@ -1,0 +1,11 @@
+/Users/n/Projects/FileSearch/FileSearch/bin/Debug/netcoreapp2.1/FileSearch.deps.json
+/Users/n/Projects/FileSearch/FileSearch/bin/Debug/netcoreapp2.1/FileSearch.runtimeconfig.json
+/Users/n/Projects/FileSearch/FileSearch/bin/Debug/netcoreapp2.1/FileSearch.runtimeconfig.dev.json
+/Users/n/Projects/FileSearch/FileSearch/bin/Debug/netcoreapp2.1/FileSearch.dll
+/Users/n/Projects/FileSearch/FileSearch/bin/Debug/netcoreapp2.1/FileSearch.pdb
+/Users/n/Projects/FileSearch/FileSearch/obj/Debug/netcoreapp2.1/FileSearch.csprojAssemblyReference.cache
+/Users/n/Projects/FileSearch/FileSearch/obj/Debug/netcoreapp2.1/FileSearch.csproj.CoreCompileInputs.cache
+/Users/n/Projects/FileSearch/FileSearch/obj/Debug/netcoreapp2.1/FileSearch.AssemblyInfoInputs.cache
+/Users/n/Projects/FileSearch/FileSearch/obj/Debug/netcoreapp2.1/FileSearch.AssemblyInfo.cs
+/Users/n/Projects/FileSearch/FileSearch/obj/Debug/netcoreapp2.1/FileSearch.dll
+/Users/n/Projects/FileSearch/FileSearch/obj/Debug/netcoreapp2.1/FileSearch.pdb
