@@ -1,0 +1,11 @@
+/Users/n/Projects/PaternalTree/PaternalTree/bin/Debug/netcoreapp2.1/PaternalTree.deps.json
+/Users/n/Projects/PaternalTree/PaternalTree/bin/Debug/netcoreapp2.1/PaternalTree.runtimeconfig.json
+/Users/n/Projects/PaternalTree/PaternalTree/bin/Debug/netcoreapp2.1/PaternalTree.runtimeconfig.dev.json
+/Users/n/Projects/PaternalTree/PaternalTree/bin/Debug/netcoreapp2.1/PaternalTree.dll
+/Users/n/Projects/PaternalTree/PaternalTree/bin/Debug/netcoreapp2.1/PaternalTree.pdb
+/Users/n/Projects/PaternalTree/PaternalTree/obj/Debug/netcoreapp2.1/PaternalTree.csprojAssemblyReference.cache
+/Users/n/Projects/PaternalTree/PaternalTree/obj/Debug/netcoreapp2.1/PaternalTree.csproj.CoreCompileInputs.cache
+/Users/n/Projects/PaternalTree/PaternalTree/obj/Debug/netcoreapp2.1/PaternalTree.AssemblyInfoInputs.cache
+/Users/n/Projects/PaternalTree/PaternalTree/obj/Debug/netcoreapp2.1/PaternalTree.AssemblyInfo.cs
+/Users/n/Projects/PaternalTree/PaternalTree/obj/Debug/netcoreapp2.1/PaternalTree.dll
+/Users/n/Projects/PaternalTree/PaternalTree/obj/Debug/netcoreapp2.1/PaternalTree.pdb
