@@ -1,0 +1,11 @@
+/Users/n/Projects/BST/BST/bin/Debug/netcoreapp2.1/BST.deps.json
+/Users/n/Projects/BST/BST/bin/Debug/netcoreapp2.1/BST.runtimeconfig.json
+/Users/n/Projects/BST/BST/bin/Debug/netcoreapp2.1/BST.runtimeconfig.dev.json
+/Users/n/Projects/BST/BST/bin/Debug/netcoreapp2.1/BST.dll
+/Users/n/Projects/BST/BST/bin/Debug/netcoreapp2.1/BST.pdb
+/Users/n/Projects/BST/BST/obj/Debug/netcoreapp2.1/BST.csprojAssemblyReference.cache
+/Users/n/Projects/BST/BST/obj/Debug/netcoreapp2.1/BST.csproj.CoreCompileInputs.cache
+/Users/n/Projects/BST/BST/obj/Debug/netcoreapp2.1/BST.AssemblyInfoInputs.cache
+/Users/n/Projects/BST/BST/obj/Debug/netcoreapp2.1/BST.AssemblyInfo.cs
+/Users/n/Projects/BST/BST/obj/Debug/netcoreapp2.1/BST.dll
+/Users/n/Projects/BST/BST/obj/Debug/netcoreapp2.1/BST.pdb
