@@ -1,0 +1,11 @@
+/Users/n/Projects/AVL/AVL/obj/Debug/netcoreapp2.1/AVL.csprojAssemblyReference.cache
+/Users/n/Projects/AVL/AVL/obj/Debug/netcoreapp2.1/AVL.csproj.CoreCompileInputs.cache
+/Users/n/Projects/AVL/AVL/obj/Debug/netcoreapp2.1/AVL.AssemblyInfoInputs.cache
+/Users/n/Projects/AVL/AVL/obj/Debug/netcoreapp2.1/AVL.AssemblyInfo.cs
+/Users/n/Projects/AVL/AVL/bin/Debug/netcoreapp2.1/AVL.deps.json
+/Users/n/Projects/AVL/AVL/bin/Debug/netcoreapp2.1/AVL.runtimeconfig.json
+/Users/n/Projects/AVL/AVL/bin/Debug/netcoreapp2.1/AVL.runtimeconfig.dev.json
+/Users/n/Projects/AVL/AVL/bin/Debug/netcoreapp2.1/AVL.dll
+/Users/n/Projects/AVL/AVL/bin/Debug/netcoreapp2.1/AVL.pdb
+/Users/n/Projects/AVL/AVL/obj/Debug/netcoreapp2.1/AVL.dll
+/Users/n/Projects/AVL/AVL/obj/Debug/netcoreapp2.1/AVL.pdb
