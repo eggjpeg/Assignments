@@ -1,0 +1,7 @@
+C:\Users\user\source\repos\RBT\RBT\obj\Debug\RBT.csprojResolveAssemblyReference.cache
+C:\Users\user\source\repos\RBT\RBT\obj\Debug\RBT.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\RBT\RBT\bin\Debug\RBT.exe.config
+C:\Users\user\source\repos\RBT\RBT\bin\Debug\RBT.exe
+C:\Users\user\source\repos\RBT\RBT\bin\Debug\RBT.pdb
+C:\Users\user\source\repos\RBT\RBT\obj\Debug\RBT.exe
+C:\Users\user\source\repos\RBT\RBT\obj\Debug\RBT.pdb
