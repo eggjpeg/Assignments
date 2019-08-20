@@ -1,0 +1,8 @@
+C:\Users\Kolya\source\repos\Hashtable\Hashtable\bin\Debug\Hashtable.exe.config
+C:\Users\Kolya\source\repos\Hashtable\Hashtable\bin\Debug\Hashtable.exe
+C:\Users\Kolya\source\repos\Hashtable\Hashtable\bin\Debug\Hashtable.pdb
+C:\Users\Kolya\source\repos\Hashtable\Hashtable\obj\Debug\Hashtable.csproj.CoreCompileInputs.cache
+C:\Users\Kolya\source\repos\Hashtable\Hashtable\obj\Debug\Hashtable.exe
+C:\Users\Kolya\source\repos\Hashtable\Hashtable\obj\Debug\Hashtable.pdb
+C:\Users\Kolya\source\repos\Hashtable\Hashtable\obj\Debug\Hashtable.csprojAssemblyReference.cache
+C:\Users\Kolya\source\repos\Hashtable\Hashtable\bin\Debug\20k.txt
